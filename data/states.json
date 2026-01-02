@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "california",
+    "name": "California",
+    "ageRequirement": 18,
+    "cardFee": 100,
+    "description": "California offers a comprehensive medical card program for eligible residents. The state requires applicants to be at least 18 years old and have a qualifying medical condition as determined by a licensed physician."
+  },
+  {
+    "slug": "new-york",
+    "name": "New York",
+    "ageRequirement": 21,
+    "cardFee": 50,
+    "description": "New York's medical card program provides access to certified dispensaries throughout the state. Applicants must be 21 or older and have documentation from a registered healthcare provider."
+  },
+  {
+    "slug": "florida",
+    "name": "Florida",
+    "ageRequirement": 18,
+    "cardFee": 75,
+    "description": "Florida's medical marijuana program requires patients to be registered with the state and have a qualifying medical condition. The minimum age is 18, though minors can qualify with parental consent."
+  },
+  {
+    "slug": "texas",
+    "name": "Texas",
+    "ageRequirement": 18,
+    "cardFee": 0,
+    "description": "Texas operates a limited medical program called the Compassionate Use Program. Eligible patients must be 18 or older and have specific qualifying conditions as defined by state law."
+  },
+  {
+    "slug": "colorado",
+    "name": "Colorado",
+    "ageRequirement": 18,
+    "cardFee": 25,
+    "description": "Colorado was one of the first states to establish a medical marijuana program. Patients must be 18 or older and have a debilitating medical condition as certified by a physician."
+  },
+  {
+    "slug": "arizona",
+    "name": "Arizona",
+    "ageRequirement": 18,
+    "cardFee": 150,
+    "description": "Arizona's medical marijuana program serves patients with qualifying medical conditions. The application fee is $150 and applicants must be at least 18 years old with valid physician certification."
+  },
+  {
+    "slug": "massachusetts",
+    "name": "Massachusetts",
+    "ageRequirement": 18,
+    "cardFee": 50,
+    "description": "Massachusetts offers a medical marijuana program for patients with qualifying conditions. Registration requires being 18 or older and having a written certification from a registered healthcare provider."
+  },
+  {
+    "slug": "washington",
+    "name": "Washington",
+    "ageRequirement": 18,
+    "cardFee": 0,
+    "description": "Washington State provides medical marijuana access to qualified patients. There is no fee for registration, and applicants must be at least 18 years old with a valid medical authorization."
+  },
+  {
+    "slug": "oregon",
+    "name": "Oregon",
+    "ageRequirement": 18,
+    "cardFee": 200,
+    "description": "Oregon's Medical Marijuana Program requires patients to be 18 or older and have a qualifying medical condition. The annual registration fee is $200, with reduced fees available for qualifying individuals."
+  },
+  {
+    "slug": "nevada",
+    "name": "Nevada",
+    "ageRequirement": 18,
+    "cardFee": 100,
+    "description": "Nevada's medical marijuana program allows qualified patients to access dispensaries statewide. Applicants must be Nevada residents, at least 18 years old, and have physician certification."
+  }
+]
