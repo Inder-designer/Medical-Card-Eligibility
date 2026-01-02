@@ -113,10 +113,10 @@ medical-card-eligibility/
 │   ├── admin.json                # Admin credentials
 │   ├── states.json               # State information
 │   └── submissions.json          # Stored submissions
-├── types/                        # TypeScript definitions
-│   ├── auth.ts                   # Auth type definitions
+├── types/                        # TypeScript
+│   ├── auth.ts                   # Auth type
 │   └── index.ts                  # General types
-├── public/                       # Static assets
+├── public/                       
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.ts
