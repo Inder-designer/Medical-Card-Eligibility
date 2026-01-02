@@ -3,34 +3,13 @@
 import { useParams, useRouter } from 'next/navigation';
 import { use } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
 import FormInput from '@/components/FormInput';
+import { submissionSchema } from '@/components/formik/submissions/validations';
+import { getSubmissionInitialValue } from '@/components/formik/submissions/initialValues';
 
 interface ApplyPageProps {
     params: Promise<{ slug: string }>;
 }
-
-// Yup validation schema
-const validationSchema = Yup.object({
-    fullName: Yup.string()
-        .min(2, 'Name must be at least 2 characters')
-        .required('Full name is required'),
-    email: Yup.string()
-        .email('Invalid email format')
-        .required('Email is required'),
-    age: Yup.number()
-        .min(18, 'Age must be at least 18')
-        .max(120, 'Age must be less than 120')
-        .required('Age is required')
-        .typeError('Age must be a number'),
-    medicalCondition: Yup.string()
-        .min(10, 'Please provide more details (at least 10 characters)')
-        .required('Medical condition is required'),
-    agreedToPrivacy: Yup.boolean()
-        .oneOf([true], 'You must agree to the privacy policy')
-        .required('You must agree to the privacy policy'),
-});
-
 export default function ApplyPage({ params }: ApplyPageProps) {
     console.log({ params });
 
@@ -38,6 +17,7 @@ export default function ApplyPage({ params }: ApplyPageProps) {
     const router = useRouter();
 
     const handleSubmit = async (values: any, { setSubmitting }: any) => {
+
         try {
             const response = await fetch('/api/eligibility', {
                 method: 'POST',
@@ -77,14 +57,8 @@ export default function ApplyPage({ params }: ApplyPageProps) {
                     </p>
 
                     <Formik
-                        initialValues={{
-                            fullName: '',
-                            email: '',
-                            age: '',
-                            medicalCondition: '',
-                            agreedToPrivacy: false,
-                        }}
-                        validationSchema={validationSchema}
+                        initialValues={getSubmissionInitialValue}
+                        validationSchema={submissionSchema}
                         onSubmit={handleSubmit}
                     >
                         {({ isSubmitting }) => (
@@ -142,8 +116,8 @@ export default function ApplyPage({ params }: ApplyPageProps) {
                                         type="submit"
                                         disabled={isSubmitting}
                                         className={`flex-1 font-semibold px-8 py-3 rounded-lg transition-all ${isSubmitting
-                                                ? 'bg-gray-400 cursor-not-allowed'
-                                                : 'bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg'
+                                            ? 'bg-gray-400 cursor-not-allowed'
+                                            : 'bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg'
                                             } text-white`}
                                     >
                                         {isSubmitting ? 'Submitting...' : 'Submit Application'}
