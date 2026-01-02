@@ -181,7 +181,7 @@ interface AuthSession {
 {
   "id": 1,
   "username": "admin",
-  "email": "admin@medicalcard.com",
+  "email": "admin@gmail.com",
   "role": "admin"
 }
 ```

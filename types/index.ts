@@ -12,7 +12,7 @@ export interface FormSubmission {
   email: string;
   age: number;
   medicalCondition: string;
-  state: string;
+  state?: string;
   agreedToPrivacy: boolean;
   submittedAt: string;
 }

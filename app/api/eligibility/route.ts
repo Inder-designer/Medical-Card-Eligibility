@@ -2,23 +2,18 @@ import { NextRequest, NextResponse } from 'next/server';
 import { FormSubmission } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
-import { backendSubmissionSchema } from '@/components/formik/submissions/validations';
+import { submissionSchema } from '@/components/formik/submissions/validations';
 
 export async function POST(request: NextRequest) {
     try {
         const rawBody = await request.json();
-        const body = await backendSubmissionSchema.validate(rawBody, {
+        const body = await submissionSchema.validate(rawBody, {
             abortEarly: false,
         });
 
         const submission: FormSubmission = {
+            ...body,
             id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-            fullName: body.fullName,
-            email: body.email,
-            age: body.age,
-            medicalCondition: body.medicalCondition,
-            state: body.state,
-            agreedToPrivacy: body.agreedToPrivacy,
             submittedAt: new Date().toISOString(),
         };
 

@@ -19,11 +19,3 @@ export const submissionSchema = Yup.object({
         .oneOf([true], 'You must agree to the privacy policy')
         .required('You must agree to the privacy policy'),
 });
-export const backendSubmissionSchema = Yup.object({
-  fullName: Yup.string().required(),
-  email: Yup.string().email().required(),
-  age: Yup.number().required(),
-  medicalCondition: Yup.string().required(),
-  state: Yup.string().required(),
-  agreedToPrivacy: Yup.boolean().oneOf([true]).required(),
-});
